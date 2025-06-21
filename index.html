@@ -1425,6 +1425,230 @@
       }, 4000);
   }
   </script>
+  
+  <!-- Newsletter Subscription JavaScript -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+      // Handle newsletter subscription form
+      const subscribeForm = document.querySelector('.subscribe-form');
+      if (subscribeForm) {
+          subscribeForm.addEventListener('submit', function(e) {
+              e.preventDefault();
+              
+              // Get the email input value
+              const emailInput = this.querySelector('input[placeholder="Enter email address"]');
+              const userEmail = emailInput.value.trim();
+              
+              // Validate email
+              if (!userEmail) {
+                  alert('Please enter your email address.');
+                  return;
+              }
+              
+              // Basic email validation
+              const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+              if (!emailRegex.test(userEmail)) {
+                  alert('Please enter a valid email address.');
+                  return;
+              }
+              
+              // Create Gmail compose URL
+              const subject = encodeURIComponent('Free Accounting Consultation Request');
+              const body = encodeURIComponent(
+                  `Hello Manan,\n\n` +
+                  `I would like to learn more about your accounting services and schedule a free consultation.\n\n` +
+                  `My email: ${userEmail}\n\n` +
+                  `Please let me know your availability.\n\n` +
+                  `Best regards`
+              );
+              
+              const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=mananhkansara@gmail.com&su=${subject}&body=${body}`;
+              
+              // Show success message
+              showSubscriptionSuccess(userEmail);
+              
+              // Open Gmail after a short delay
+              setTimeout(() => {
+                  window.open(gmailUrl, '_blank');
+              }, 1500);
+              
+              // Reset form
+              emailInput.value = '';
+          });
+      }
+  });
+
+  function showSubscriptionSuccess(email) {
+      // Create and show success notification
+      const successDiv = document.createElement('div');
+      successDiv.style.cssText = `
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          background: #28a745;
+          color: white;
+          padding: 20px 25px;
+          border-radius: 10px;
+          box-shadow: 0 10px 30px rgba(40, 167, 69, 0.3);
+          z-index: 9999;
+          max-width: 400px;
+          animation: slideIn 0.5s ease;
+      `;
+      
+      successDiv.innerHTML = `
+          <div style="display: flex; align-items: center;">
+              <span class="fa fa-envelope" style="font-size: 24px; margin-right: 10px;"></span>
+              <div>
+                  <strong>Subscription Successful!</strong><br>
+                  <small>Opening Gmail to compose your message...</small>
+              </div>
+          </div>
+      `;
+      
+      // Add animation keyframes if not already present
+      if (!document.querySelector('#success-animation')) {
+          const style = document.createElement('style');
+          style.id = 'success-animation';
+          style.textContent = `
+              @keyframes slideIn {
+                  from { transform: translateX(100%); opacity: 0; }
+                  to { transform: translateX(0); opacity: 1; }
+              }
+          `;
+          document.head.appendChild(style);
+      }
+      
+      document.body.appendChild(successDiv);
+      
+      // Remove notification after 4 seconds
+      setTimeout(() => {
+          successDiv.style.animation = 'slideIn 0.5s ease reverse';
+          setTimeout(() => {
+              if (successDiv.parentNode) {
+                  successDiv.parentNode.removeChild(successDiv);
+              }
+          }, 500);
+      }, 4000);
+  }
+  </script>
+  
+  <!-- Footer Consultation Form JavaScript -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+      // Handle footer consultation form
+      const consultationForm = document.querySelector('.form-consultation');
+      if (consultationForm) {
+          consultationForm.addEventListener('submit', function(e) {
+              e.preventDefault();
+              
+              // Get form data
+              const nameInput = this.querySelector('input[placeholder="Your Name"]');
+              const emailInput = this.querySelector('input[placeholder="Your Email"]');
+              const subjectInput = this.querySelector('input[placeholder="Subject"]');
+              const messageInput = this.querySelector('textarea[placeholder="Message"]');
+              
+              const userName = nameInput.value.trim();
+              const userEmail = emailInput.value.trim();
+              const userSubject = subjectInput.value.trim();
+              const userMessage = messageInput.value.trim();
+              
+              // Validate required fields
+              if (!userName || !userEmail || !userSubject || !userMessage) {
+                  alert('Please fill in all fields (Name, Email, Subject, and Message).');
+                  return;
+              }
+              
+              // Basic email validation
+              const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+              if (!emailRegex.test(userEmail)) {
+                  alert('Please enter a valid email address.');
+                  return;
+              }
+              
+              // Create Gmail compose URL with form data
+              const subject = encodeURIComponent(userSubject);
+              const body = encodeURIComponent(
+                  `Hello Manan,\n\n` +
+                  `${userMessage}\n\n` +
+                  `Contact Details:\n` +
+                  `Name: ${userName}\n` +
+                  `Email: ${userEmail}\n\n` +
+                  `I look forward to hearing from you.\n\n` +
+                  `Best regards,\n${userName}`
+              );
+              
+              const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=mananhkansara@gmail.com&su=${subject}&body=${body}`;
+              
+              // Show success message
+              showConsultationSuccess(userName);
+              
+              // Open Gmail after a short delay
+              setTimeout(() => {
+                  window.open(gmailUrl, '_blank');
+              }, 1500);
+              
+              // Reset form
+              nameInput.value = '';
+              emailInput.value = '';
+              subjectInput.value = '';
+              messageInput.value = '';
+          });
+      }
+  });
+
+  function showConsultationSuccess(name) {
+      // Create and show success notification
+      const successDiv = document.createElement('div');
+      successDiv.style.cssText = `
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          background: #28a745;
+          color: white;
+          padding: 20px 25px;
+          border-radius: 10px;
+          box-shadow: 0 10px 30px rgba(40, 167, 69, 0.3);
+          z-index: 9999;
+          max-width: 400px;
+          animation: slideIn 0.5s ease;
+      `;
+      
+      successDiv.innerHTML = `
+          <div style="display: flex; align-items: center;">
+              <span class="fa fa-paper-plane" style="font-size: 24px; margin-right: 10px;"></span>
+              <div>
+                  <strong>Message Ready!</strong><br>
+                  <small>Hi ${name}, opening Gmail to send your message...</small>
+              </div>
+          </div>
+      `;
+      
+      // Add animation keyframes if not already present
+      if (!document.querySelector('#success-animation')) {
+          const style = document.createElement('style');
+          style.id = 'success-animation';
+          style.textContent = `
+              @keyframes slideIn {
+                  from { transform: translateX(100%); opacity: 0; }
+                  to { transform: translateX(0); opacity: 1; }
+              }
+          `;
+          document.head.appendChild(style);
+      }
+      
+      document.body.appendChild(successDiv);
+      
+      // Remove notification after 4 seconds
+      setTimeout(() => {
+          successDiv.style.animation = 'slideIn 0.5s ease reverse';
+          setTimeout(() => {
+              if (successDiv.parentNode) {
+                  successDiv.parentNode.removeChild(successDiv);
+              }
+          }, 500);
+      }, 4000);
+  }
+  </script>
     
   </body>
 </html>

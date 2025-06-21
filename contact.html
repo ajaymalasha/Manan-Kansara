@@ -17,6 +17,123 @@
 
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Custom CSS for Schedule Meeting Section -->
+    <style>
+    .meeting-card {
+      border-radius: 15px !important;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .meeting-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.15) !important;
+    }
+    
+    .meeting-form-contact .form-control {
+      border-radius: 8px;
+      border: 2px solid #e9ecef;
+      transition: border-color 0.3s ease;
+      padding: 12px 15px;
+    }
+    
+    .meeting-form-contact .form-control:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    }
+    
+    .meeting-form-contact .form-label {
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #495057;
+    }
+    
+    .btn-primary.btn-lg {
+      padding: 15px 30px;
+      border-radius: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      border: none;
+      background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    }
+    
+    .btn-primary.btn-lg:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0,123,255,0.3);
+      background: linear-gradient(135deg, #0056b3 0%, #004085 100%);
+    }
+    
+    .meeting-icon {
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    
+    .benefit-item {
+      transition: transform 0.2s ease;
+    }
+    
+    .benefit-item:hover {
+      transform: translateX(5px);
+    }
+    
+    .benefit-icon {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .text-white-75 {
+      color: rgba(255, 255, 255, 0.75) !important;
+    }
+    
+    .text-white-50 {
+      color: rgba(255, 255, 255, 0.5) !important;
+    }
+    
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .meeting-card {
+        margin-top: 30px;
+      }
+      
+      .meeting-content h2 {
+        font-size: 28px;
+      }
+      
+      .meeting-form-contact .row .col-sm-6 {
+        margin-bottom: 15px;
+      }
+      
+      .btn-primary.btn-lg {
+        padding: 12px 25px;
+        font-size: 16px;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .meeting-card {
+        padding: 20px !important;
+      }
+      
+      .meeting-content {
+        text-align: center;
+      }
+      
+      .benefit-item {
+        justify-content: center;
+      }
+    }
+    </style>
   </head>
   <body>
 
@@ -179,6 +296,115 @@
     	</div>
     </section>
 
+    <!-- Schedule Meeting Section -->
+    <section class="ftco-section bg-primary">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="row align-items-center">
+              <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+                <div class="meeting-content text-white">
+                  <span class="subheading text-white-50 mb-2 d-block">Let's Connect</span>
+                  <h2 class="mb-4 text-white">Schedule a Free Consultation</h2>
+                  <p class="mb-4 text-white-75">Ready to discuss your accounting needs? Book a convenient Google Meet session with Manan and get expert financial advice tailored to your business.</p>
+                  
+                  <div class="meeting-benefits mb-4">
+                    <div class="benefit-item d-flex align-items-center mb-3">
+                      <div class="benefit-icon mr-3">
+                        <span class="fa fa-check-circle text-white"></span>
+                      </div>
+                      <span class="text-white">Free 30-minute consultation</span>
+                    </div>
+                    <div class="benefit-item d-flex align-items-center mb-3">
+                      <div class="benefit-icon mr-3">
+                        <span class="fa fa-check-circle text-white"></span>
+                      </div>
+                      <span class="text-white">Personalized financial strategy</span>
+                    </div>
+                    <div class="benefit-item d-flex align-items-center mb-3">
+                      <div class="benefit-icon mr-3">
+                        <span class="fa fa-check-circle text-white"></span>
+                      </div>
+                      <span class="text-white">Expert business guidance</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-lg-6 col-md-12">
+                <div class="meeting-card bg-white rounded shadow-lg p-4 p-lg-5">
+                  <div class="text-center mb-4">
+                    <div class="meeting-icon mb-3">
+                      <span class="fa fa-video-camera text-primary" style="font-size: 48px;"></span>
+                    </div>
+                    <h3 class="text-dark mb-2">Book Your Meeting</h3>
+                    <p class="text-muted">Choose your preferred time slot</p>
+                  </div>
+                  
+                  <form class="meeting-form-contact">
+                    <div class="row">
+                      <div class="col-sm-6 mb-3">
+                        <label class="form-label text-dark">Full Name *</label>
+                        <input type="text" class="form-control" placeholder="Your Name" required>
+                      </div>
+                      <div class="col-sm-6 mb-3">
+                        <label class="form-label text-dark">Email *</label>
+                        <input type="email" class="form-control" placeholder="your@email.com" required>
+                      </div>
+                    </div>
+                    
+                    <div class="row">
+                      <div class="col-sm-6 mb-3">
+                        <label class="form-label text-dark">Phone</label>
+                        <input type="tel" class="form-control" placeholder="+91 9999999999">
+                      </div>
+                      <div class="col-sm-6 mb-3">
+                        <label class="form-label text-dark">Preferred Date</label>
+                        <input type="date" class="form-control" required>
+                      </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                      <label class="form-label text-dark">Preferred Time</label>
+                      <select class="form-control" required>
+                        <option value="">Select Time Slot</option>
+                        <option value="09:00">09:00 AM - 09:30 AM</option>
+                        <option value="10:00">10:00 AM - 10:30 AM</option>
+                        <option value="11:00">11:00 AM - 11:30 AM</option>
+                        <option value="14:00">02:00 PM - 02:30 PM</option>
+                        <option value="15:00">03:00 PM - 03:30 PM</option>
+                        <option value="16:00">04:00 PM - 04:30 PM</option>
+                        <option value="17:00">05:00 PM - 05:30 PM</option>
+                      </select>
+                    </div>
+                    
+                    <div class="mb-4">
+                      <label class="form-label text-dark">Message (Optional)</label>
+                      <textarea class="form-control" rows="3" placeholder="Tell us about your business needs..."></textarea>
+                    </div>
+                    
+                    <div class="d-grid">
+                      <button type="submit" class="btn btn-primary btn-lg">
+                        <span class="fa fa-calendar mr-2"></span>
+                        Schedule Google Meet
+                      </button>
+                    </div>
+                    
+                    <div class="text-center mt-3">
+                      <small class="text-muted">
+                        <span class="fa fa-shield mr-1"></span>
+                        Your information is secure and confidential
+                      </small>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
    	<!-- Google Maps container - Temporarily hidden until valid API key is obtained -->
    	<!-- <div id="map" class="map"></div> -->
 
@@ -303,6 +529,375 @@
   <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY_HERE"></script> -->
   <!-- <script src="js/google-map.js"></script> -->
   <script src="js/main.js"></script>
+    
+  <!-- Schedule Meeting JavaScript -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+      // Form submission handling for CONTACT PAGE form
+      const contactForm = document.querySelector('.meeting-form-contact');
+      if (contactForm) {
+          contactForm.addEventListener('submit', function(e) {
+              e.preventDefault();
+              
+              // Get form data
+              const name = this.querySelector('input[placeholder="Your Name"]').value;
+              const email = this.querySelector('input[placeholder="your@email.com"]').value;
+              const phone = this.querySelector('input[placeholder="+91 9999999999"]').value;
+              const date = this.querySelector('input[type="date"]').value;
+              const time = this.querySelector('select').value;
+              const message = this.querySelector('textarea').value;
+              
+              // Validate required fields
+              if (!name || !email || !date || !time) {
+                  alert('Please fill in all required fields (Name, Email, Date, and Time).');
+                  return;
+              }
+              
+              // Create Google Calendar event
+              createGoogleCalendarEvent(name, email, phone, date, time, message);
+          });
+      }
+  });
+
+  function createGoogleCalendarEvent(name, email, phone, date, time, message) {
+      // Parse the selected time
+      const timeSlots = {
+          '09:00': { start: '09:00', end: '09:30' },
+          '10:00': { start: '10:00', end: '10:30' },
+          '11:00': { start: '11:00', end: '11:30' },
+          '14:00': { start: '14:00', end: '14:30' },
+          '15:00': { start: '15:00', end: '15:30' },
+          '16:00': { start: '16:00', end: '16:30' },
+          '17:00': { start: '17:00', end: '17:30' }
+      };
+      
+      const selectedSlot = timeSlots[time];
+      if (!selectedSlot) {
+          alert('Please select a valid time slot.');
+          return;
+      }
+      
+      // Create start and end datetime
+      const startDateTime = new Date(`${date}T${selectedSlot.start}:00`);
+      const endDateTime = new Date(`${date}T${selectedSlot.end}:00`);
+      
+      // Format dates for Google Calendar (YYYYMMDDTHHMMSSZ format)
+      const startISO = startDateTime.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+      const endISO = endDateTime.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+      
+      // Create event details
+      const eventTitle = encodeURIComponent(`Accounting Consultation with Manan Kansara`);
+      const eventDetails = encodeURIComponent(
+          `Consultation Meeting Details:\n\n` +
+          `Client: ${name}\n` +
+          `Email: ${email}\n` +
+          `Phone: ${phone || 'Not provided'}\n` +
+          `Message: ${message || 'No additional message'}\n\n` +
+          `This is a Google Meet video consultation for accounting and financial advisory services.\n\n` +
+          `Meeting Host: Manan Kansara\n` +
+          `Email: mananhkansara@gmail.com\n` +
+          `Phone: +919727397708`
+      );
+      const location = encodeURIComponent('Google Meet (Link will be shared)');
+      
+      // Google Calendar URL parameters
+      const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE` +
+          `&text=${eventTitle}` +
+          `&dates=${startISO}/${endISO}` +
+          `&details=${eventDetails}` +
+          `&location=${location}` +
+          `&add=${email},mananhkansara@gmail.com` +
+          `&trp=false`;
+      
+      // Show success message and redirect
+      showSuccessMessage(name, date, selectedSlot.start);
+      
+      // Small delay before opening calendar
+      setTimeout(() => {
+          window.open(calendarUrl, '_blank');
+      }, 1500);
+      
+      // Reset form
+      document.querySelector('.meeting-form-contact').reset();
+  }
+
+  function showSuccessMessage(name, date, time) {
+      // Create and show success notification
+      const successDiv = document.createElement('div');
+      successDiv.style.cssText = `
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          background: #28a745;
+          color: white;
+          padding: 20px 25px;
+          border-radius: 10px;
+          box-shadow: 0 10px 30px rgba(40, 167, 69, 0.3);
+          z-index: 9999;
+          max-width: 400px;
+          animation: slideIn 0.5s ease;
+      `;
+      
+      successDiv.innerHTML = `
+          <div style="display: flex; align-items: center;">
+              <span class="fa fa-check-circle" style="font-size: 24px; margin-right: 10px;"></span>
+              <div>
+                  <strong>Meeting Request Sent!</strong><br>
+                  <small>Hi ${name}, redirecting to Google Calendar...</small>
+              </div>
+          </div>
+      `;
+      
+      // Add animation keyframes
+      if (!document.querySelector('#success-animation')) {
+          const style = document.createElement('style');
+          style.id = 'success-animation';
+          style.textContent = `
+              @keyframes slideIn {
+                  from { transform: translateX(100%); opacity: 0; }
+                  to { transform: translateX(0); opacity: 1; }
+              }
+          `;
+          document.head.appendChild(style);
+      }
+      
+      document.body.appendChild(successDiv);
+      
+      // Remove notification after 4 seconds
+      setTimeout(() => {
+          successDiv.style.animation = 'slideIn 0.5s ease reverse';
+          setTimeout(() => {
+              if (successDiv.parentNode) {
+                  successDiv.parentNode.removeChild(successDiv);
+              }
+          }, 500);
+      }, 4000);
+  }
+  </script>
+  
+  <!-- Newsletter Subscription JavaScript -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+      // Handle newsletter subscription form
+      const subscribeForm = document.querySelector('.subscribe-form');
+      if (subscribeForm) {
+          subscribeForm.addEventListener('submit', function(e) {
+              e.preventDefault();
+              
+              // Get the email input value
+              const emailInput = this.querySelector('input[placeholder="Enter email address"]');
+              const userEmail = emailInput.value.trim();
+              
+              // Validate email
+              if (!userEmail) {
+                  alert('Please enter your email address.');
+                  return;
+              }
+              
+              // Basic email validation
+              const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+              if (!emailRegex.test(userEmail)) {
+                  alert('Please enter a valid email address.');
+                  return;
+              }
+              
+              // Create Gmail compose URL
+              const subject = encodeURIComponent('Free Accounting Consultation Request');
+              const body = encodeURIComponent(
+                  `Hello Manan,\n\n` +
+                  `I would like to learn more about your accounting services and schedule a free consultation.\n\n` +
+                  `My email: ${userEmail}\n\n` +
+                  `Please let me know your availability.\n\n` +
+                  `Best regards`
+              );
+              
+              const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=mananhkansara@gmail.com&su=${subject}&body=${body}`;
+              
+              // Show success message
+              showSubscriptionSuccess(userEmail);
+              
+              // Open Gmail after a short delay
+              setTimeout(() => {
+                  window.open(gmailUrl, '_blank');
+              }, 1500);
+              
+              // Reset form
+              emailInput.value = '';
+          });
+      }
+  });
+
+  function showSubscriptionSuccess(email) {
+      // Create and show success notification
+      const successDiv = document.createElement('div');
+      successDiv.style.cssText = `
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          background: #28a745;
+          color: white;
+          padding: 20px 25px;
+          border-radius: 10px;
+          box-shadow: 0 10px 30px rgba(40, 167, 69, 0.3);
+          z-index: 9999;
+          max-width: 400px;
+          animation: slideIn 0.5s ease;
+      `;
+      
+      successDiv.innerHTML = `
+          <div style="display: flex; align-items: center;">
+              <span class="fa fa-envelope" style="font-size: 24px; margin-right: 10px;"></span>
+              <div>
+                  <strong>Subscription Successful!</strong><br>
+                  <small>Opening Gmail to compose your message...</small>
+              </div>
+          </div>
+      `;
+      
+      // Add animation keyframes if not already present
+      if (!document.querySelector('#success-animation')) {
+          const style = document.createElement('style');
+          style.id = 'success-animation';
+          style.textContent = `
+              @keyframes slideIn {
+                  from { transform: translateX(100%); opacity: 0; }
+                  to { transform: translateX(0); opacity: 1; }
+              }
+          `;
+          document.head.appendChild(style);
+      }
+      
+      document.body.appendChild(successDiv);
+      
+      // Remove notification after 4 seconds
+      setTimeout(() => {
+          successDiv.style.animation = 'slideIn 0.5s ease reverse';
+          setTimeout(() => {
+              if (successDiv.parentNode) {
+                  successDiv.parentNode.removeChild(successDiv);
+              }
+          }, 500);
+      }, 4000);
+  }
+  </script>
+  
+  <!-- Footer Consultation Form JavaScript -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+      // Handle footer consultation form
+      const consultationForm = document.querySelector('.form-consultation');
+      if (consultationForm) {
+          consultationForm.addEventListener('submit', function(e) {
+              e.preventDefault();
+              
+              // Get form data
+              const nameInput = this.querySelector('input[placeholder="Your Name"]');
+              const emailInput = this.querySelector('input[placeholder="Your Email"]');
+              const subjectInput = this.querySelector('input[placeholder="Subject"]');
+              const messageInput = this.querySelector('textarea[placeholder="Message"]');
+              
+              const userName = nameInput.value.trim();
+              const userEmail = emailInput.value.trim();
+              const userSubject = subjectInput.value.trim();
+              const userMessage = messageInput.value.trim();
+              
+              // Validate required fields
+              if (!userName || !userEmail || !userSubject || !userMessage) {
+                  alert('Please fill in all fields (Name, Email, Subject, and Message).');
+                  return;
+              }
+              
+              // Basic email validation
+              const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+              if (!emailRegex.test(userEmail)) {
+                  alert('Please enter a valid email address.');
+                  return;
+              }
+              
+              // Create Gmail compose URL with form data
+              const subject = encodeURIComponent(userSubject);
+              const body = encodeURIComponent(
+                  `Hello Manan,\n\n` +
+                  `${userMessage}\n\n` +
+                  `Contact Details:\n` +
+                  `Name: ${userName}\n` +
+                  `Email: ${userEmail}\n\n` +
+                  `I look forward to hearing from you.\n\n` +
+                  `Best regards,\n${userName}`
+              );
+              
+              const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=mananhkansara@gmail.com&su=${subject}&body=${body}`;
+              
+              // Show success message
+              showConsultationSuccess(userName);
+              
+              // Open Gmail after a short delay
+              setTimeout(() => {
+                  window.open(gmailUrl, '_blank');
+              }, 1500);
+              
+              // Reset form
+              nameInput.value = '';
+              emailInput.value = '';
+              subjectInput.value = '';
+              messageInput.value = '';
+          });
+      }
+  });
+
+  function showConsultationSuccess(name) {
+      // Create and show success notification
+      const successDiv = document.createElement('div');
+      successDiv.style.cssText = `
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          background: #28a745;
+          color: white;
+          padding: 20px 25px;
+          border-radius: 10px;
+          box-shadow: 0 10px 30px rgba(40, 167, 69, 0.3);
+          z-index: 9999;
+          max-width: 400px;
+          animation: slideIn 0.5s ease;
+      `;
+      
+      successDiv.innerHTML = `
+          <div style="display: flex; align-items: center;">
+              <span class="fa fa-paper-plane" style="font-size: 24px; margin-right: 10px;"></span>
+              <div>
+                  <strong>Message Ready!</strong><br>
+                  <small>Hi ${name}, opening Gmail to send your message...</small>
+              </div>
+          </div>
+      `;
+      
+      // Add animation keyframes if not already present
+      if (!document.querySelector('#success-animation')) {
+          const style = document.createElement('style');
+          style.id = 'success-animation';
+          style.textContent = `
+              @keyframes slideIn {
+                  from { transform: translateX(100%); opacity: 0; }
+                  to { transform: translateX(0); opacity: 1; }
+              }
+          `;
+          document.head.appendChild(style);
+      }
+      
+      document.body.appendChild(successDiv);
+      
+      // Remove notification after 4 seconds
+      setTimeout(() => {
+          successDiv.style.animation = 'slideIn 0.5s ease reverse';
+          setTimeout(() => {
+              if (successDiv.parentNode) {
+                  successDiv.parentNode.removeChild(successDiv);
+              }
+          }, 500);
+      }, 4000);
+  }
+  </script>
     
   </body>
 </html>
