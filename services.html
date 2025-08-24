@@ -17,6 +17,101 @@
 
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Custom CSS for Mobile Visibility Fixes -->
+    <style>
+    /* Mobile visibility fixes for sections */
+    @media (max-width: 768px) {
+      .ftco-section.bg-light.ftco-no-pt,
+      .ftco-counter.bg-light.ftco-no-pt,
+      .ftco-section {
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: block !important;
+      }
+      
+      .ftco-animate {
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+      
+      /* Ensure proper spacing on mobile */
+      .ftco-section.bg-light.ftco-no-pt,
+      .ftco-counter.bg-light.ftco-no-pt {
+        padding: 3rem 0 !important;
+      }
+      
+      /* Fix for services section on mobile */
+      .services {
+        margin-bottom: 2rem;
+      }
+      
+      .services .d-block {
+        background: #fff;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        margin-bottom: 1rem;
+      }
+      
+      /* Fix for counter section on mobile */
+      .ftco-counter .block-18 {
+        background: #fff;
+        padding: 2rem 1rem;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        margin-bottom: 1.5rem;
+      }
+      
+      /* Ensure proper image display on mobile */
+      .img-video {
+        min-height: 300px !important;
+        margin-bottom: 2rem;
+      }
+    }
+    
+    /* Additional mobile fixes for better visibility */
+    @media (max-width: 576px) {
+      .ftco-section.bg-light.ftco-no-pt,
+      .ftco-counter.bg-light.ftco-no-pt {
+        padding: 2rem 0 !important;
+      }
+      
+      .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      
+      /* Ensure text is readable on mobile */
+      .heading-section h2 {
+        font-size: 1.8rem !important;
+        line-height: 1.3;
+      }
+      
+      .services .heading {
+        font-size: 1.2rem !important;
+        margin-bottom: 0.5rem;
+      }
+      
+      .services p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+    }
+    
+    /* Fallback for JavaScript disabled or failed */
+    .ftco-section.bg-light.ftco-no-pt,
+    .ftco-counter.bg-light.ftco-no-pt,
+    .ftco-section {
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+    
+    .ftco-animate {
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+    </style>
   </head>
   <body>
 
@@ -65,7 +160,6 @@
 	        	<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
 	        	<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
 	        	<li class="nav-item active"><a href="services.html" class="nav-link">Services</a></li>
-	          <li class="nav-item"><a href="cases.html" class="nav-link">Case Study</a></li>
 	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
 	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
 	        </ul>
@@ -94,8 +188,8 @@
             		<span class="flaticon-accounting-1"></span>
               </div>
               <div class="media-body">
-                <h3 class="heading">Tax Accounting</h3>
-                <p>Comprehensive tax services including tax planning, preparation, and compliance for individuals and businesses across various industries.</p>
+                <h3 class="heading">Company Tax Return</h3>
+                <p>Professional company tax return preparation and lodgement services to ensure compliance and maximize deductions.</p>
               </div>
             </div>      
           </div>
@@ -105,8 +199,8 @@
             		<span class="flaticon-tax"></span>
               </div>
               <div class="media-body">
-                <h3 class="heading">Business Advisory</h3>
-                <p>Strategic business advice and deep understanding of your business operations to help improve performance and profitability.</p>
+                <h3 class="heading">Individual Tax Return</h3>
+                <p>Comprehensive individual tax return services with expert advice to maximize your refund and ensure accuracy.</p>
               </div>
             </div>    
           </div>
@@ -116,8 +210,8 @@
             		<span class="flaticon-loan"></span>
               </div>
               <div class="media-body">
-                <h3 class="heading">Audit & Assurance</h3>
-                <p>Independent audit and assurance services for listed and unlisted companies, not-for-profit organizations, and compliance requirements.</p>
+                <h3 class="heading">Trust Tax Return</h3>
+                <p>Specialized trust tax return preparation and compliance services for family trusts and business structures.</p>
               </div>
             </div>      
           </div>
@@ -127,8 +221,8 @@
             		<span class="flaticon-budget"></span>
               </div>
               <div class="media-body">
-                <h3 class="heading">Bookkeeping Services</h3>
-                <p>Professional bookkeeping services using Xero, MYOB, and other leading accounting software to keep your business compliant.</p>
+                <h3 class="heading">Business Activity Statement (BAS)</h3>
+                <p>Timely BAS preparation and lodgement services to keep your business compliant with GST obligations.</p>
               </div>
             </div>      
           </div>
@@ -138,8 +232,8 @@
             		<span class="flaticon-wealth"></span>
               </div>
               <div class="media-body">
-                <h3 class="heading">Self-Managed Super Funds</h3>
-                <p>Comprehensive SMSF services including setup, compliance, and ongoing management to keep your fund compliant and optimized.</p>
+                <h3 class="heading">Business Registration</h3>
+                <p>Complete business registration services including ABN, GST, and business structure setup assistance.</p>
               </div>
             </div>      
           </div>
@@ -149,8 +243,8 @@
             		<span class="flaticon-teamwork"></span>
               </div>
               <div class="media-body">
-                <h3 class="heading">Farm & Agribusiness</h3>
-                <p>Specialized accounting services for farming operations and agribusiness with deep understanding of agricultural industry needs.</p>
+                <h3 class="heading">Business Tax Planning</h3>
+                <p>Strategic tax planning services to minimize your tax liability and optimize your business structure.</p>
               </div>
             </div>      
           </div>
@@ -160,8 +254,8 @@
             		<span class="flaticon-accountant"></span>
               </div>
               <div class="media-body">
-                <h3 class="heading">Virtual CFO Services</h3>
-                <p>Strategic financial leadership and outsourced accounting services to help you focus on running your business effectively.</p>
+                <h3 class="heading">Business Financial Statements</h3>
+                <p>Professional preparation of financial statements including profit & loss, balance sheet, and cash flow statements.</p>
               </div>
             </div>      
           </div>
@@ -171,8 +265,74 @@
             		<span class="flaticon-accounting"></span>
               </div>
               <div class="media-body">
-                <h3 class="heading">Not-for-Profit Accounting</h3>
-                <p>Expert accounting and audit services tailored for not-for-profit organizations, charities, and community groups.</p>
+                <h3 class="heading">Fringe Benefit Tax Return</h3>
+                <p>Expert FBT return preparation and compliance services to manage your fringe benefits obligations.</p>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex services align-self-stretch px-4 ftco-animate">
+            <div class="d-block">
+              <div class="icon d-flex mr-2">
+            		<span class="flaticon-accounting-1"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">Business Payroll Services</h3>
+                <p>Comprehensive payroll management including PAYG, superannuation, and employee payment processing.</p>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex services align-self-stretch px-4 ftco-animate">
+            <div class="d-block">
+              <div class="icon d-flex mr-2">
+            		<span class="flaticon-tax"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">Bookkeeping Services</h3>
+                <p>Professional bookkeeping services using leading software to maintain accurate and compliant financial records.</p>
+              </div>
+            </div>    
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex services align-self-stretch px-4 ftco-animate">
+            <div class="d-block">
+              <div class="icon d-flex mr-2">
+            		<span class="flaticon-loan"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">QuickBooks Training & Setup</h3>
+                <p>Complete QuickBooks setup, training, and ongoing support to streamline your accounting processes.</p>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex services align-self-stretch px-4 ftco-animate">
+            <div class="d-block">
+              <div class="icon d-flex mr-2">
+            		<span class="flaticon-budget"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">MYOB Training & Setup</h3>
+                <p>Professional MYOB setup, training, and support services to optimize your business accounting system.</p>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex services align-self-stretch px-4 ftco-animate">
+            <div class="d-block">
+              <div class="icon d-flex mr-2">
+            		<span class="flaticon-wealth"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">Xero Training & Setup</h3>
+                <p>Complete Xero cloud accounting setup, training, and ongoing support for modern business needs.</p>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex services align-self-stretch px-4 ftco-animate">
+            <div class="d-block">
+              <div class="icon d-flex mr-2">
+            		<span class="flaticon-teamwork"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">Property Tax Accounting</h3>
+                <p>Specialized property tax accounting services for property investors and real estate businesses.</p>
               </div>
             </div>      
           </div>
@@ -189,35 +349,35 @@
     			</div>
     			<div class="col-md-6 pl-md-5 py-md-5">
     				<div class="heading-section pl-md-4 pt-md-5">
-    					<span class="subheading">Welcome to Accounting</span>
-	            <h2 class="mb-4">We Are the Best Accounting Agency</h2>
+    					<span class="subheading">How We Work</span>
+	            <h2 class="mb-4">🧭 Our Onboarding Process: Clear. Collaborative. Compliant.</h2>
     				</div>
     				<div class="services-2 w-100 d-flex">
     					<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-wealth"></span></div>
     					<div class="text pl-4">
-    						<h4>Self-Managed Super Funds</h4>
-    						<p>Comprehensive SMSF services including setup, compliance, and ongoing management to keep your fund compliant and optimized.</p>
+    						<h4>✅ Step 1: Initial Consultation</h4>
+    						<p>We start with a complimentary, no-obligation meeting to understand your business, goals, and current financial setup. Gain clarity on where you are and where you want to go.</p>
     					</div>
     				</div>
     				<div class="services-2 w-100 d-flex">
     					<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-accountant"></span></div>
     					<div class="text pl-4">
-    						<h4>Virtual CFO Services</h4>
-    						<p>Strategic financial leadership and outsourced accounting services to help you focus on running your business effectively.</p>
+    						<h4>🗂️ Step 2: Comprehensive Review</h4>
+    						<p>Our experts conduct a detailed analysis of your existing accounts, systems, and compliance status. We identify gaps, inefficiencies, or risks — and propose tailored solutions.</p>
     					</div>
     				</div>
     				<div class="services-2 w-100 d-flex">
     					<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-teamwork"></span></div>
     					<div class="text pl-4">
-    						<h4>Farm & Agribusiness</h4>
-    						<p>Specialized accounting services for farming operations and agribusiness with deep understanding of agricultural industry needs.</p>
+    						<h4>⚙️ Step 3: Setup & Clean-Up</h4>
+    						<p>We organise, update, or migrate your accounting records to ensure they are accurate, compliant, and easy to manage. Everything from chart of accounts to payroll and VAT is aligned with best practices.</p>
     					</div>
     				</div>
     				<div class="services-2 w-100 d-flex">
     					<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-accounting"></span></div>
     					<div class="text pl-4">
-    						<h4>Not-for-Profit Accounting</h4>
-    						<p>Expert accounting and audit services tailored for not-for-profit organizations, charities, and community groups.</p>
+    						<h4>🤝 Step 4: Ongoing Support</h4>
+    						<p>Once your foundations are strong, we move into proactive monthly or quarterly management — with real-time reporting, tax planning, and advisory support. Stay ahead of deadlines and make informed decisions, every step of the way.</p>
     					</div>
     				</div>
 	        </div>
@@ -225,90 +385,7 @@
     	</div>
     </section>
 
-    <section class="ftco-section bg-light ftco-no-pt">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5 mb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-          	<span class="subheading">Price &amp; Plans</span>
-            <h2>Affordable Packages</h2>
-          </div>
-        </div>
-    		<div class="row">
-    			<div class="col-md-6 col-lg-3 ftco-animate">
-	          <div class="block-7">
-	            <div class="text-center">
-	            	<span class="excerpt d-block">Personal</span>
-	            <span class="price"><sup>$</sup> <span class="number">49</span> <sub>/mos</sub></span>
-	            
-	            <ul class="pricing-text mb-5">
-	              <li><span class="fa fa-check mr-2"></span>Tax Preparation</li>
-	              <li><span class="fa fa-check mr-2"></span>Basic Bookkeeping</li>
-	              <li><span class="fa fa-check mr-2"></span>Financial Statements</li>
-	              <li><span class="fa fa-check mr-2"></span>GST/BAS Returns</li>
-	              <li><span class="fa fa-check mr-2"></span>Email Support</li>
-	            </ul>
 
-	            <a href="#" class="btn btn-primary d-block px-2 py-3">Get Started</a>
-	            </div>
-	          </div>
-	        </div>
-	        <div class="col-md-6 col-lg-3 ftco-animate">
-	          <div class="block-7">
-	            <div class="text-center">
-            	<span class="excerpt d-block">Business</span>
-	            <span class="price"><sup>$</sup> <span class="number">79</span> <sub>/mos</sub></span>
-	            
-	            <ul class="pricing-text mb-5">
-	              <li><span class="fa fa-check mr-2"></span>All Personal Features</li>
-	              <li><span class="fa fa-check mr-2"></span>Business Advisory</li>
-	              <li><span class="fa fa-check mr-2"></span>Payroll Services</li>
-	              <li><span class="fa fa-check mr-2"></span>Management Reports</li>
-	              <li><span class="fa fa-check mr-2"></span>Phone Support</li>
-	            </ul>
-
-	            <a href="#" class="btn btn-primary d-block px-2 py-3">Get Started</a>
-	            </div>
-	          </div>
-	        </div>
-	        <div class="col-md-6 col-lg-3 ftco-animate">
-	          <div class="block-7">
-	            <div class="text-center">
-	            	<span class="excerpt d-block">Ultimate</span>
-	            <span class="price"><sup>$</sup> <span class="number">109</span> <sub>/mos</sub></span>
-	            
-	            <ul class="pricing-text mb-5">
-	              <li><span class="fa fa-check mr-2"></span>All Business Features</li>
-	              <li><span class="fa fa-check mr-2"></span>Audit & Assurance</li>
-	              <li><span class="fa fa-check mr-2"></span>SMSF Services</li>
-	              <li><span class="fa fa-check mr-2"></span>Virtual CFO</li>
-	              <li><span class="fa fa-check mr-2"></span>Priority Support</li>
-	            </ul>
-
-	            <a href="#" class="btn btn-primary d-block px-2 py-3">Get Started</a>
-	            </div>
-	          </div>
-	        </div>
-	        <div class="col-md-6 col-lg-3 ftco-animate">
-	          <div class="block-7">
-	            <div class="text-center">
-	            	<span class="excerpt d-block">Premium</span>
-	            <span class="price"><sup>$</sup> <span class="number">149</span> <sub>/mos</sub></span>
-	            
-	            <ul class="pricing-text mb-5">
-	              <li><span class="fa fa-check mr-2"></span>All Ultimate Features</li>
-	              <li><span class="fa fa-check mr-2"></span>Farm Accounting</li>
-	              <li><span class="fa fa-check mr-2"></span>Not-for-Profit Audit</li>
-	              <li><span class="fa fa-check mr-2"></span>Compliance Services</li>
-	              <li><span class="fa fa-check mr-2"></span>Dedicated Accountant</li>
-	            </ul>
-
-	            <a href="#" class="btn btn-primary d-block px-2 py-3">Get Started</a>
-	            </div>
-	          </div>
-	        </div>
-	      </div>
-    	</div>
-    </section>
 
     <section class="ftco-section ftco-no-pb ftco-no-pt bg-secondary">
       <div class="container py-5">
@@ -430,6 +507,38 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY_HERE"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+    
+  <!-- Mobile Visibility Fixes JavaScript -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+      // Mobile visibility fixes
+      function ensureMobileVisibility() {
+          if (window.innerWidth <= 768) {
+              // Force visibility for all sections on mobile
+              const sections = document.querySelectorAll('.ftco-section.bg-light.ftco-no-pt, .ftco-counter.bg-light.ftco-no-pt, .ftco-section');
+              sections.forEach(section => {
+                  section.style.opacity = '1';
+                  section.style.visibility = 'visible';
+                  section.style.display = 'block';
+              });
+              
+              // Force visibility for all animated elements
+              const animatedElements = document.querySelectorAll('.ftco-animate');
+              animatedElements.forEach(element => {
+                  element.style.opacity = '1';
+                  element.style.visibility = 'visible';
+                  element.classList.add('ftco-animated');
+              });
+          }
+      }
+      
+      // Run on load
+      ensureMobileVisibility();
+      
+      // Run on resize
+      window.addEventListener('resize', ensureMobileVisibility);
+  });
+  </script>
     
   </body>
 </html>

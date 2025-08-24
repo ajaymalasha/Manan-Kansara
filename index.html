@@ -18,8 +18,100 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/style.css">
     
-    <!-- Custom CSS for Schedule Meeting Section -->
+    <!-- Custom CSS for Schedule Meeting Section and Mobile Fixes -->
     <style>
+    /* Mobile visibility fixes for sections */
+    @media (max-width: 768px) {
+      .ftco-section.bg-light.ftco-no-pt,
+      .ftco-counter.bg-light.ftco-no-pt,
+      .ftco-section {
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: block !important;
+      }
+      
+      .ftco-animate {
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+      
+      /* Ensure proper spacing on mobile */
+      .ftco-section.bg-light.ftco-no-pt,
+      .ftco-counter.bg-light.ftco-no-pt {
+        padding: 3rem 0 !important;
+      }
+      
+      /* Fix for services section on mobile */
+      .services {
+        margin-bottom: 2rem;
+      }
+      
+      .services .d-block {
+        background: #fff;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        margin-bottom: 1rem;
+      }
+      
+      /* Fix for counter section on mobile */
+      .ftco-counter .block-18 {
+        background: #fff;
+        padding: 2rem 1rem;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        margin-bottom: 1.5rem;
+      }
+      
+      /* Ensure proper image display on mobile */
+      .img-video {
+        min-height: 300px !important;
+        margin-bottom: 2rem;
+      }
+    }
+    
+    /* Additional mobile fixes for better visibility */
+    @media (max-width: 576px) {
+      .ftco-section.bg-light.ftco-no-pt,
+      .ftco-counter.bg-light.ftco-no-pt {
+        padding: 2rem 0 !important;
+      }
+      
+      .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      
+      /* Ensure text is readable on mobile */
+      .heading-section h2 {
+        font-size: 1.8rem !important;
+        line-height: 1.3;
+      }
+      
+      .services .heading {
+        font-size: 1.2rem !important;
+        margin-bottom: 0.5rem;
+      }
+      
+      .services p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+    }
+    
+    /* Fallback for JavaScript disabled or failed */
+    .ftco-section.bg-light.ftco-no-pt,
+    .ftco-counter.bg-light.ftco-no-pt,
+    .ftco-section {
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+    
+    .ftco-animate {
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+    
     .meeting-card {
       border-radius: 15px !important;
       box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
@@ -98,6 +190,54 @@
     
     .text-white-50 {
       color: rgba(255, 255, 255, 0.5) !important;
+    }
+    
+    /* Hero banner button styles */
+    .hero-wrap .btn {
+      margin: 0 5px;
+      transition: all 0.3s ease;
+    }
+    
+    .hero-wrap .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    .hero-wrap .btn-outline-white {
+      border: 2px solid #fff;
+      background: transparent;
+      color: #fff;
+    }
+    
+    .hero-wrap .btn-outline-white:hover {
+      background: #fff;
+      color: #000;
+    }
+    
+    /* Process section styles */
+    .ftco-counter .block-18 {
+      padding: 30px 20px;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+    }
+    
+    .ftco-counter .block-18:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+    
+    .ftco-counter .block-18 .text p {
+      font-size: 14px;
+      color: #666;
+      margin-top: 10px;
+    }
+    
+    .ftco-counter .block-18 .text span {
+      font-size: 16px;
+      color: #333;
     }
     
     /* Mobile Responsiveness */
@@ -315,12 +455,9 @@
 		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 	    	<a class="navbar-brand" href="index.html">Accounting</a>
-	    	<form action="#" class="searchform order-sm-start order-lg-last">
-          <div class="form-group d-flex">
-            <input type="text" class="form-control pl-3" placeholder="Search">
-            <button type="submit" placeholder="" class="form-control search"><span class="fa fa-search"></span></button>
-          </div>
-        </form>
+	    	<div class="d-flex align-items-center">
+          <a href="#book-meeting" class="btn btn-primary mr-3">Book a Meeting</a>
+        </div>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="fa fa-bars"></span> Menu
 	      </button>
@@ -329,7 +466,6 @@
 	        	<li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
 	        	<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
 	        	<li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-	          <li class="nav-item"><a href="cases.html" class="nav-link">Case Study</a></li>
 	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
 	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
 	        </ul>
@@ -347,7 +483,10 @@
 		          	<div class="text w-100 text-center">
 		          		<h2>We Business Grow</h2>
 			            <h1 class="mb-4">We Help Your Business Innovate and Grow</h1>
-			            <p><a href="#" class="btn btn-white connect-with-us-btn">Connect with us</a></p>
+			            <p class="mb-4">
+			              <a href="#get-started" class="btn btn-white mr-3">Get Started</a>
+			              <a href="#book-meeting" class="btn btn-outline-white">Book a Meeting</a>
+			            </p>
 		            </div>
 		          </div>
 		        </div>
@@ -362,7 +501,10 @@
 		          	<div class="text w-100 text-center">
 		          		<h2>Professional Accounting Services</h2>
 			            <h1 class="mb-4">Expert Financial Advice & Business Support</h1>
-			            <p><a href="#" class="btn btn-white connect-with-us-btn">Connect with us</a></p>
+			            <p class="mb-4">
+			              <a href="#get-started" class="btn btn-white mr-3">Get Started</a>
+			              <a href="#book-meeting" class="btn btn-outline-white">Book a Meeting</a>
+			            </p>
 		            </div>
 		          </div>
 		        </div>
@@ -377,7 +519,10 @@
 		          	<div class="text w-100 text-center">
 		          		<h2>Comprehensive Tax Solutions</h2>
 			            <h1 class="mb-4">Strategic Tax Planning & Compliance Services</h1>
-			            <p><a href="#" class="btn btn-white connect-with-us-btn">Connect with us</a></p>
+			            <p class="mb-4">
+			              <a href="#get-started" class="btn btn-white mr-3">Get Started</a>
+			              <a href="#book-meeting" class="btn btn-outline-white">Book a Meeting</a>
+			            </p>
 		            </div>
 		          </div>
 		        </div>
@@ -395,35 +540,35 @@
     			</div>
     			<div class="col-md-6 pl-md-5 py-md-5">
     				<div class="heading-section pl-md-4 pt-md-5">
-    					<span class="subheading">Welcome to Professional Accounting</span>
-	            <h2 class="mb-4">Leading Chartered Accountants & Business Advisors</h2>
-    				</div>
-    				<div class="services-2 w-100 d-flex">
-    					<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-wealth"></span></div>
-    					<div class="text pl-4">
-    						<h4>Self-Managed Super Funds</h4>
-    						<p>Comprehensive SMSF services including setup, compliance, and ongoing management to keep your fund compliant and optimized.</p>
-    					</div>
-    				</div>
-    				<div class="services-2 w-100 d-flex">
-    					<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-accountant"></span></div>
-    					<div class="text pl-4">
-    						<h4>Virtual CFO Services</h4>
-    						<p>Strategic financial leadership and outsourced accounting services to help you focus on running your business effectively.</p>
-    					</div>
+    					<span class="subheading">Digital-First Chartered Accountants</span>
+	            <h2 class="mb-4">Digital-First Chartered Accountants and Strategic Advisors</h2>
     				</div>
     				<div class="services-2 w-100 d-flex">
     					<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-teamwork"></span></div>
     					<div class="text pl-4">
-    						<h4>Farm & Agribusiness</h4>
-    						<p>Specialized accounting services for farming operations and agribusiness with deep understanding of agricultural industry needs.</p>
+    						<h4>Client Centric Approach</h4>
+    						<p>We don't believe in one-size-fits-all. Every service is adapted to your unique business needs. A single point of contact for all your needs.</p>
     					</div>
     				</div>
     				<div class="services-2 w-100 d-flex">
-    					<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-accounting"></span></div>
+    					<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-accounting-1"></span></div>
     					<div class="text pl-4">
-    						<h4>Not-for-Profit Accounting</h4>
-    						<p>Expert accounting and audit services tailored for not-for-profit organizations, charities, and community groups.</p>
+    						<h4>Technology-Driven</h4>
+    						<p>We operate fully in the cloud using platforms like Xero, QuickBooks, and Dext — offering seamless, real-time collaboration with clients anywhere in the world. While we love automation, we never lose the human touch. Every client is supported by real advisors who understand your business and your goals.</p>
+    					</div>
+    				</div>
+    				<div class="services-2 w-100 d-flex">
+    					<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-tax"></span></div>
+    					<div class="text pl-4">
+    						<h4>Regulatory Foresight</h4>
+    						<p>We actively monitor regulatory changes to keep you compliant and avoid penalties. Not just tax filing — we help you plan taxes to reduce liabilities. Our systems and processes ensure you're always prepared for audit.</p>
+    					</div>
+    				</div>
+    				<div class="services-2 w-100 d-flex">
+    					<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-wealth"></span></div>
+    					<div class="text pl-4">
+    						<h4>Trusted by Ambitious Businesses</h4>
+    						<p>Trusted by startups, SMEs, Non-profit organizations and high-net-worth individuals. Our work is grounded in integrity and transparency.</p>
     					</div>
     				</div>
 	        </div>
@@ -433,6 +578,11 @@
 
     <section class="ftco-section bg-light ftco-no-pt">
     	<div class="container">
+    		<div class="row justify-content-center mb-5">
+    			<div class="col-md-7 text-center">
+    				<h2 class="mb-4">How we help</h2>
+    			</div>
+    		</div>
     		<div class="row">
           <div class="col-md-6 col-lg-3 d-flex services align-self-stretch px-4 ftco-animate">
             <div class="d-block">
@@ -440,8 +590,8 @@
             		<span class="flaticon-accounting-1"></span>
               </div>
               <div class="media-body">
-                <h3 class="heading">Tax Accounting</h3>
-                <p>Comprehensive tax services including tax planning, preparation, and compliance for individuals and businesses across various industries.</p>
+                <h3 class="heading">Small Business Tax Accountants</h3>
+                <p>Specialised tax accounting services for small business owners: Income Tax Returns, Payroll, Business Activity Statements (BAS), Business Registrations, Fringe Benefits Tax (FBT), Financial Statements.</p>
               </div>
             </div>      
           </div>
@@ -451,8 +601,8 @@
             		<span class="flaticon-tax"></span>
               </div>
               <div class="media-body">
-                <h3 class="heading">Business Advisory</h3>
-                <p>Strategic business advice and deep understanding of your business operations to help improve performance and profitability.</p>
+                <h3 class="heading">Contractor Accountants</h3>
+                <p>Specialised accounting, tax services and advice on Personal Services Income (PSI) for: Contractors, Consultants, Freelancers, Locums.</p>
               </div>
             </div>    
           </div>
@@ -462,8 +612,8 @@
             		<span class="flaticon-loan"></span>
               </div>
               <div class="media-body">
-                <h3 class="heading">Audit & Assurance</h3>
-                <p>Independent audit and assurance services for listed and unlisted companies, not-for-profit organizations, and compliance requirements.</p>
+                <h3 class="heading">Bookkeeping Services</h3>
+                <p>Stay in tune with your small business finances: Invoicing, Record Keeping, Financial Reports and Statements, Reporting. We're certified in cloud-based accounting software including Xero, MYOB and QuickBooks.</p>
               </div>
             </div>      
           </div>
@@ -473,8 +623,19 @@
             		<span class="flaticon-budget"></span>
               </div>
               <div class="media-body">
-                <h3 class="heading">Bookkeeping Services</h3>
-                <p>Professional bookkeeping services using Xero, MYOB, and other leading accounting software to keep your business compliant.</p>
+                <h3 class="heading">Small Business Tax Planning</h3>
+                <p>Work-with-you service to reduce your tax liability and increased profitability: Through our combined decades of services, our small business accountant team can help you unearth the most effective and legal accounting tax strategies to achieve the best outcome for you, your family and your small business.</p>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex services align-self-stretch px-4 ftco-animate">
+            <div class="d-block">
+              <div class="icon d-flex mr-2">
+            		<span class="flaticon-accountant"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">Business Advice & Structuring</h3>
+                <p>Proactive and strategic guidance for small business owners: Business structures, Business plans. We start with a complimentary, no-obligation meeting to understand your business, goals, and current financial setup.</p>
               </div>
             </div>      
           </div>
@@ -484,44 +645,53 @@
 
     <section class="ftco-counter bg-light ftco-no-pt" id="section-counter">
     	<div class="container">
+    		<div class="row justify-content-center mb-5">
+    			<div class="col-md-7 text-center">
+    				<h2 class="mb-4">Our Process</h2>
+    			</div>
+    		</div>
 				<div class="row">
           <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18 text-center">
               <div class="text">
-                <strong class="number" data-number="50">0</strong>
+                <strong class="number" style="font-size: 3rem;">🎯</strong>
               </div>
               <div class="text">
-              	<span>Years of Experienced</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18 text-center">
-              <div class="text">
-                <strong class="number" data-number="8500">0</strong>
-              </div>
-              <div class="text">
-              	<span>Cases Completed</span>
+              	<span><strong>Step 1: Initial Consultation</strong></span>
+              	<p class="mt-2">Gain clarity on where you are and where you want to go.</p>
               </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18 text-center">
               <div class="text">
-                <strong class="number" data-number="20">0</strong>
+                <strong class="number" style="font-size: 3rem;">🗂️</strong>
               </div>
               <div class="text">
-              	<span>Awards Won</span>
+              	<span><strong>Step 2: Comprehensive Review</strong></span>
+              	<p class="mt-2">We identify gaps, inefficiencies, or risks — and propose tailored solutions.</p>
               </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18 text-center">
               <div class="text">
-                <strong class="number" data-number="50">0</strong>
+                <strong class="number" style="font-size: 3rem;">⚙️</strong>
               </div>
               <div class="text">
-              	<span>Expert Consultant</span>
+              	<span><strong>Step 3: Setup & Clean-Up</strong></span>
+              	<p class="mt-2">Everything from chart of accounts to payroll and VAT is aligned with best practices.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 text-center">
+              <div class="text">
+                <strong class="number" style="font-size: 3rem;">🤝</strong>
+              </div>
+              <div class="text">
+              	<span><strong>Step 4: Ongoing Support</strong></span>
+              	<p class="mt-2">Stay ahead of deadlines and make informed decisions, every step of the way.</p>
               </div>
             </div>
           </div>
@@ -529,203 +699,9 @@
     	</div>
     </section>
 
-    <section class="ftco-section testimony-section bg-light">
-    	<div class="overlay"></div>
-      <div class="container">
-        <div class="row justify-content-center pb-5 mb-3">
-          <div class="col-md-7 heading-section heading-section-white text-center ftco-animate">
-          	<span class="subheading">Testimonies</span>
-            <h2>Happy Clients &amp; Feedbacks</h2>
-          </div>
-        </div>
-        <div class="row ftco-animate">
-          <div class="col-md-12">
-            <div class="carousel-testimony owl-carousel ftco-owl">
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
-                  <div class="text">
-                    <p class="mb-4">Outstanding service! They helped us streamline our bookkeeping and saved us thousands in tax planning. Their expertise in business advisory has been invaluable for our growth strategy.</p>
-                    <div class="d-flex align-items-center">
-                    	<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
-                    	<div class="pl-3">
-		                    <p class="name">Sarah Mitchell</p>
-		                    <span class="position">Restaurant Owner</span>
-		                  </div>
-	                  </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
-                  <div class="text">
-                    <p class="mb-4">Professional, reliable, and always available when we need them. Their audit services ensured our compliance and gave us peace of mind. Highly recommend their comprehensive approach.</p>
-                    <div class="d-flex align-items-center">
-                    	<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
-                    	<div class="pl-3">
-		                    <p class="name">David Chen</p>
-		                    <span class="position">Tech Startup Director</span>
-		                  </div>
-	                  </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
-                  <div class="text">
-                    <p class="mb-4">They transformed our financial management completely. From tax preparation to strategic planning, their team delivers exceptional results. Our business has never been more organized.</p>
-                    <div class="d-flex align-items-center">
-                    	<div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
-                    	<div class="pl-3">
-		                    <p class="name">Maria Rodriguez</p>
-		                    <span class="position">Retail Chain Manager</span>
-		                  </div>
-	                  </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
-                  <div class="text">
-                    <p class="mb-4">Exceptional attention to detail and personalized service. They helped our nonprofit navigate complex compliance requirements while maximizing our tax benefits. True professionals!</p>
-                    <div class="d-flex align-items-center">
-                    	<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
-                    	<div class="pl-3">
-		                    <p class="name">James Thompson</p>
-		                    <span class="position">Nonprofit Executive</span>
-		                  </div>
-	                  </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
-                  <div class="text">
-                    <p class="mb-4">Their business consulting services helped us identify cost savings and improve our financial processes. The team is knowledgeable, responsive, and truly cares about client success.</p>
-                    <div class="d-flex align-items-center">
-                    	<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
-                    	<div class="pl-3">
-		                    <p class="name">Emily Watson</p>
-		                    <span class="position">Manufacturing VP</span>
-		                  </div>
-	                  </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section class="ftco-section ftco-no-pt bg-light ftco-faqs">
-    	<div class="container">
-    		<div class="row">
-    			<div class="col-lg-6">
-    				<div class="img-faqs w-100">
-	    				<div class="img mb-4 mb-sm-0" style="background-image:url(images/about-2.jpg);">
-	    				</div>
-	    				<div class="img img-2 mb-4 mb-sm-0" style="background-image:url(images/about-1.jpg);">
-	    				</div>
-	    			</div>
-    			</div>
-    			<div class="col-lg-6 pl-lg-5">
-    				<div class="heading-section mb-5 mt-5 mt-lg-0">
-    					<span class="subheading">FAQs</span>
-	            <h2 class="mb-3">Frequently Asks Questions</h2>
-	            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-    				</div>
-    				<div id="accordion" class="myaccordion w-100" aria-multiselectable="true">
-						  <div class="card">
-						    <div class="card-header p-0" id="headingOne">
-						      <h2 class="mb-0">
-						        <button href="#collapseOne" class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link" data-parent="#accordion" data-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
-						        	<p class="mb-0">How to fixed a problem?</p>
-						          <i class="fa" aria-hidden="true"></i>
-						        </button>
-						      </h2>
-						    </div>
-						    <div class="collapse show" id="collapseOne" role="tabpanel" aria-labelledby="headingOne">
-						      <div class="card-body py-3 px-0">
-						      	<ol>
-						      		<li>Far far away, behind the word mountains</li>
-						      		<li>Consonantia, there live the blind texts</li>
-						      		<li>When she reached the first hills of the Italic Mountains</li>
-						      		<li>Bookmarksgrove, the headline of Alphabet Village</li>
-						      		<li>Separated they live in Bookmarksgrove right</li>
-						      	</ol>
-						      </div>
-						    </div>
-						  </div>
 
-						  <div class="card">
-						    <div class="card-header p-0" id="headingTwo" role="tab">
-						      <h2 class="mb-0">
-						        <button href="#collapseTwo" class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link" data-parent="#accordion" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
-						        	<p class="mb-0">How to manage your business loans?</p>
-						          <i class="fa" aria-hidden="true"></i>
-						        </button>
-						      </h2>
-						    </div>
-						    <div class="collapse" id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo">
-						      <div class="card-body py-3 px-0">
-						      	<ol>
-						      		<li>Far far away, behind the word mountains</li>
-						      		<li>Consonantia, there live the blind texts</li>
-						      		<li>When she reached the first hills of the Italic Mountains</li>
-						      		<li>Bookmarksgrove, the headline of Alphabet Village</li>
-						      		<li>Separated they live in Bookmarksgrove right</li>
-						      	</ol>
-						      </div>
-						    </div>
-						  </div>
 
-						  <div class="card">
-						    <div class="card-header p-0" id="headingThree" role="tab">
-						      <h2 class="mb-0">
-						        <button href="#collapseThree" class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link" data-parent="#accordion" data-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
-						        	<p class="mb-0">How to grow your investments funds?</p>
-						          <i class="fa" aria-hidden="true"></i>
-						        </button>
-						      </h2>
-						    </div>
-						    <div class="collapse" id="collapseThree" role="tabpanel" aria-labelledby="headingTwo">
-						      <div class="card-body py-3 px-0">
-						      	<ol>
-						      		<li>Far far away, behind the word mountains</li>
-						      		<li>Consonantia, there live the blind texts</li>
-						      		<li>When she reached the first hills of the Italic Mountains</li>
-						      		<li>Bookmarksgrove, the headline of Alphabet Village</li>
-						      		<li>Separated they live in Bookmarksgrove right</li>
-						      	</ol>
-						      </div>
-						    </div>
-						  </div>
-
-						  <div class="card">
-						    <div class="card-header p-0" id="headingFour" role="tab">
-						      <h2 class="mb-0">
-						        <button href="#collapseFour" class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link" data-parent="#accordion" data-toggle="collapse" aria-expanded="false" aria-controls="collapseFour">
-						        	<p class="mb-0">What are those requirements for businesses?</p>
-						          <i class="fa" aria-hidden="true"></i>
-						        </button>
-						      </h2>
-						    </div>
-						    <div class="collapse" id="collapseFour" role="tabpanel" aria-labelledby="headingTwo">
-						      <div class="card-body py-3 px-0">
-						      	<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-						      </div>
-						    </div>
-						  </div>
-						</div>
-	        </div>
-        </div>
-    	</div>
-    </section>
 
     <section class="ftco-section">
       <div class="container">
@@ -801,90 +777,7 @@
       </div>
     </section>
 
-    <section class="ftco-section bg-light">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5 mb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-          	<span class="subheading">Price &amp; Plans</span>
-            <h2>Affordable Packages</h2>
-          </div>
-        </div>
-    		<div class="row">
-    			<div class="col-md-6 col-lg-3 ftco-animate">
-	          <div class="block-7">
-	            <div class="text-center">
-	            	<span class="excerpt d-block">Personal</span>
-	            <span class="price"><sup>$</sup> <span class="number">49</span> <sub>/mos</sub></span>
-	            
-	            <ul class="pricing-text mb-5">
-	              <li><span class="fa fa-check mr-2"></span>Tax Preparation</li>
-	              <li><span class="fa fa-check mr-2"></span>Basic Bookkeeping</li>
-	              <li><span class="fa fa-check mr-2"></span>Financial Statements</li>
-	              <li><span class="fa fa-check mr-2"></span>GST/BAS Returns</li>
-	              <li><span class="fa fa-check mr-2"></span>Email Support</li>
-	            </ul>
 
-	            <a href="#" class="btn btn-primary d-block px-2 py-3">Get Started</a>
-	            </div>
-	          </div>
-	        </div>
-	        <div class="col-md-6 col-lg-3 ftco-animate">
-	          <div class="block-7">
-	            <div class="text-center">
-            	<span class="excerpt d-block">Business</span>
-	            <span class="price"><sup>$</sup> <span class="number">79</span> <sub>/mos</sub></span>
-	            
-	            <ul class="pricing-text mb-5">
-	              <li><span class="fa fa-check mr-2"></span>All Personal Features</li>
-	              <li><span class="fa fa-check mr-2"></span>Business Advisory</li>
-	              <li><span class="fa fa-check mr-2"></span>Payroll Services</li>
-	              <li><span class="fa fa-check mr-2"></span>Management Reports</li>
-	              <li><span class="fa fa-check mr-2"></span>Phone Support</li>
-	            </ul>
-
-	            <a href="#" class="btn btn-primary d-block px-2 py-3">Get Started</a>
-	            </div>
-	          </div>
-	        </div>
-	        <div class="col-md-6 col-lg-3 ftco-animate">
-	          <div class="block-7">
-	            <div class="text-center">
-	            	<span class="excerpt d-block">Ultimate</span>
-	            <span class="price"><sup>$</sup> <span class="number">109</span> <sub>/mos</sub></span>
-	            
-	            <ul class="pricing-text mb-5">
-	              <li><span class="fa fa-check mr-2"></span>All Business Features</li>
-	              <li><span class="fa fa-check mr-2"></span>Audit & Assurance</li>
-	              <li><span class="fa fa-check mr-2"></span>SMSF Services</li>
-	              <li><span class="fa fa-check mr-2"></span>Virtual CFO</li>
-	              <li><span class="fa fa-check mr-2"></span>Priority Support</li>
-	            </ul>
-
-	            <a href="#" class="btn btn-primary d-block px-2 py-3">Get Started</a>
-	            </div>
-	          </div>
-	        </div>
-	        <div class="col-md-6 col-lg-3 ftco-animate">
-	          <div class="block-7">
-	            <div class="text-center">
-	            	<span class="excerpt d-block">Premium</span>
-	            <span class="price"><sup>$</sup> <span class="number">149</span> <sub>/mos</sub></span>
-	            
-	            <ul class="pricing-text mb-5">
-	              <li><span class="fa fa-check mr-2"></span>All Ultimate Features</li>
-	              <li><span class="fa fa-check mr-2"></span>Farm Accounting</li>
-	              <li><span class="fa fa-check mr-2"></span>Not-for-Profit Audit</li>
-	              <li><span class="fa fa-check mr-2"></span>Compliance Services</li>
-	              <li><span class="fa fa-check mr-2"></span>Dedicated Accountant</li>
-	            </ul>
-
-	            <a href="#" class="btn btn-primary d-block px-2 py-3">Get Started</a>
-	            </div>
-	          </div>
-	        </div>
-	      </div>
-    	</div>
-    </section>
 
     <!-- Schedule Meeting Modal -->
     <div id="meetingModal" class="meeting-modal">
@@ -1214,14 +1107,40 @@
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
     
-  <!-- Schedule Meeting JavaScript -->
+  <!-- Schedule Meeting JavaScript and Mobile Fixes -->
   <script>
   document.addEventListener('DOMContentLoaded', function() {
+      // Mobile visibility fixes
+      function ensureMobileVisibility() {
+          if (window.innerWidth <= 768) {
+              // Force visibility for all sections on mobile
+              const sections = document.querySelectorAll('.ftco-section.bg-light.ftco-no-pt, .ftco-counter.bg-light.ftco-no-pt, .ftco-section');
+              sections.forEach(section => {
+                  section.style.opacity = '1';
+                  section.style.visibility = 'visible';
+                  section.style.display = 'block';
+              });
+              
+              // Force visibility for all animated elements
+              const animatedElements = document.querySelectorAll('.ftco-animate');
+              animatedElements.forEach(element => {
+                  element.style.opacity = '1';
+                  element.style.visibility = 'visible';
+                  element.classList.add('ftco-animated');
+              });
+          }
+      }
+      
+      // Run on load
+      ensureMobileVisibility();
+      
+      // Run on resize
+      window.addEventListener('resize', ensureMobileVisibility);
+      
       // Modal elements
       const modal = document.getElementById('meetingModal');
       const modalBackdrop = modal.querySelector('.meeting-modal-backdrop');
       const modalClose = modal.querySelector('.meeting-modal-close');
-      const connectButtons = document.querySelectorAll('.connect-with-us-btn');
       const meetingForm = modal.querySelector('.meeting-form');
       
       // Open modal function
@@ -1236,8 +1155,22 @@
           document.body.style.overflow = ''; // Restore scrolling
       }
       
-      // Add click handlers to "Connect with us" buttons
-      connectButtons.forEach(button => {
+      // Add click handlers to "Get Started" buttons
+      const getStartedButtons = document.querySelectorAll('a[href="#get-started"]');
+      getStartedButtons.forEach(button => {
+          button.addEventListener('click', function(e) {
+              e.preventDefault();
+              // Scroll to services section or show contact form
+              const servicesSection = document.querySelector('.ftco-section');
+              if (servicesSection) {
+                  servicesSection.scrollIntoView({ behavior: 'smooth' });
+              }
+          });
+      });
+      
+      // Add click handlers to "Book a Meeting" buttons
+      const bookMeetingButtons = document.querySelectorAll('a[href="#book-meeting"]');
+      bookMeetingButtons.forEach(button => {
           button.addEventListener('click', function(e) {
               e.preventDefault();
               openModal();
