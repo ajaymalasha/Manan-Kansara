@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/site-header.css">
     
     <!-- Custom CSS for Schedule Meeting Section -->
     <style>
@@ -135,62 +136,53 @@
     }
     </style>
   </head>
-  <body>
+  <body class="has-fixed-header">
 
-    <div class="wrap">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="bg-wrap">
-							<div class="row">
-								<div class="col-md-6 d-flex align-items-center">
-									<p class="mb-0 phone pl-md-2">
-										<a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +919727397708</a> 
-										<a href="#"><span class="fa fa-paper-plane mr-1"></span> mananhkansara@gmail.com</a>
-									</p>
-								</div>
-								<div class="col-md-6 d-flex justify-content-md-end">
-									<div class="social-media">
-						    		<p class="mb-0 d-flex">
-						    			<a href="https://www.linkedin.com/in/manan-kansara-36564b51/" target="_blank" class="d-flex align-items-center justify-content-center"><span class="fa fa-linkedin"><i class="sr-only">LinkedIn</i></span></a>
-						    			<a href="https://www.facebook.com/manan.kansara14190/" target="_blank" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
-						    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
-						    			<a href="https://www.instagram.com/manan0203/" target="_blank" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
-						    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
-						    		</p>
-					        </div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container">
-	    	<a class="navbar-brand" href="index.html">Accounting</a>
-	    	<form action="#" class="searchform order-sm-start order-lg-last">
-          <div class="form-group d-flex">
-            <input type="text" class="form-control pl-3" placeholder="Search">
-            <button type="submit" placeholder="" class="form-control search"><span class="fa fa-search"></span></button>
+    <header class="site-header" id="site-header">
+      <div class="site-header__topbar d-none d-lg-block">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-7">
+              <p class="mb-0 phone">
+                <a href="tel:+919727397708" class="mr-4"><span class="fa fa-phone mr-1"></span> +919727397708</a>
+                <a href="mailto:mananhkansara@gmail.com"><span class="fa fa-paper-plane mr-1"></span> mananhkansara@gmail.com</a>
+              </p>
+            </div>
+            <div class="col-lg-5 d-flex justify-content-lg-end">
+              <div class="social-media">
+                <p class="mb-0 d-flex justify-content-end">
+                  <a href="https://www.linkedin.com/in/manan-kansara-36564b51/" target="_blank" rel="noopener" class="d-flex align-items-center justify-content-center"><span class="fa fa-linkedin"><i class="sr-only">LinkedIn</i></span></a>
+                  <a href="https://www.facebook.com/manan.kansara14190/" target="_blank" rel="noopener" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
+                  <a href="https://www.instagram.com/manan0203/" target="_blank" rel="noopener" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+                </p>
+              </div>
+            </div>
           </div>
-        </form>
-	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="fa fa-bars"></span> Menu
-	      </button>
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav m-auto">
-	        	<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-	        	<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-	        	<li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-	          <li class="nav-item active"><a href="contact.html" class="nav-link">Contact</a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-    <!-- END nav -->
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg');" data-stellar-background-ratio="0.5">
+        </div>
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-light ftco_navbar ftco-navbar-light site-header__nav" id="ftco-navbar">
+        <div class="container">
+          <a class="navbar-brand site-header__brand" href="index.html">
+            <img src="images/logo.png" alt="ADEP Advisers" class="site-header__logo" id="site-logo" style="display:none;" onload="this.style.display='block'; var t=document.getElementById('site-brand-text'); if(t) t.style.display='none';" onerror="this.style.display='none';">
+            <span class="site-header__brand-text" id="site-brand-text">ADEP Advisers</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fa fa-bars"></span> Menu
+          </button>
+          <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+              <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+              <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+              <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+              <li class="nav-item active"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="#book-meeting" class="btn btn-primary nav-book-btn">Book a Meeting</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/image-5.png');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-end">
@@ -297,7 +289,7 @@
     </section>
 
     <!-- Schedule Meeting Section -->
-    <section class="ftco-section bg-primary">
+    <section class="ftco-section bg-primary" id="book-meeting">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-10">
